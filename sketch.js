@@ -7,14 +7,17 @@ function setup() {
 
 function draw() {
     background(0);
-    bubble.move();
-    bubble.show();
+    if (mouseX >= windowHeight / 2){
+        bubble.move();
+        bubble2.move();
+        bubble3.move();
+        bubble.show();
+        bubble2.show();
+        bubble3.show();
+    }
 
-    bubble2.move();
-    bubble2.show();
-
-    bubble3.move();
-    bubble3.show();
+ 
+   
 
     var x = 200;
 	var y = 400;
