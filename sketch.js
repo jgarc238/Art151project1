@@ -5,24 +5,9 @@ function setup() {
   arr = [1000];
   noCursor();
   background(220);
-  alert("The Color Coder by Jonathan Garcia \n My focus for this project is color.\n You can draw with the cursor, and the computer can also draw with \n lines.\n Left-click = ball trail\n r = rectangle/reset\n l = lines\n c + Left-click = single ball + background change");
+  alert("The Color Coder by Jonathan Garcia \n My focus for this project is color and interaction.\n You can draw with the cursor, and the computer can also draw with \n lines.\n Left-click = ball trail\n r = rectangle/reset\n l = lines\n c + Left-click = single ball + background change");
   
 
-}
-
-function star(x, y, radius1, radius2, npoints) {
-  let angle = TWO_PI / npoints;
-  let halfAngle = angle / 2.0;
-  beginShape();
-  for (let a = 0; a < TWO_PI; a += angle) {
-    let sx = x + cos(a) * radius2;
-    let sy = y + sin(a) * radius2;
-    vertex(sx, sy);
-    sx = x + cos(a + halfAngle) * radius1;
-    sy = y + sin(a + halfAngle) * radius1;
-    vertex(sx, sy);
-  }
-  endShape(CLOSE);
 }
 
 function draw() {
@@ -43,6 +28,7 @@ function draw() {
   }
   
   if(key == "c"){
+    
     background(0);
     
   }
@@ -92,20 +78,9 @@ function Ball(x, y) {
     noStroke();
     fill(random(0, 255), random(0, 255), random(0, 255));
     ellipse(this.pos.x, this.pos.y, 30, 30);
-    //rect(this.pos.x, this.pos.y, 20, 30);
   };
 }
 
-//function keyPressed() {
-  // if (keyCode === 83) {
-   // push();
-   // fill(random(0, 255), random(0, 255), random(0, 255));
-   // translate(width * 0.8, height * 0.5);
-   // rotate(frameCount / 3.0);
-   // star(random(0, windowWidth / 2), random(0, windowHeight/ 2), 30, 70, 5);
-   // pop();
- // }
-//}
 
 function Square(x, y) {
   this.pos = createVector(x, y);
