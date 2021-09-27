@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   balls = [];
   squares = [];
-  arr = [1000];
+  arr = [windowHeight];
   noCursor();
   background(220);
   alert("The Color Coder by Jonathan Garcia \n My focus for this project is color and interaction.\n You can draw with the cursor, and the computer can also draw with \n lines.\n Left-click = ball trail\n r = rectangle/reset\n l = lines\n c + Left-click = single ball + background change");
@@ -23,7 +23,7 @@ function draw() {
   if (key == "l") {
     stroke(random(0, 255), random(0, 255), random(0, 255));
     for(let i = 0; i < 10; i++){
-      line(random(arr[0], arr[10000]), random(arr[0], arr[10000]), random(arr[0], arr[10000]), random(arr[0], arr[10000]));
+      line(random(arr[0], arr[windowWidth]), random(arr[0], arr[windowHeight]), random(arr[0], arr[windowWidth]), random(arr[0], arr[windowHeight]));
     }
   }
   
