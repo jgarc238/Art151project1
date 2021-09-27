@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(windowWidth /2, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   balls = [];
   squares = [];
   arr = [1000];
